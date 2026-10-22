@@ -65,12 +65,10 @@ threeContacts.forEach(contact => {
   
   // Your code goes here ...
   const btnDelete = document.querySelectorAll(".btn-delete");
-  console.log('Delete btns', btnDelete);
 
   btnDelete.forEach(btn => {
     btn.addEventListener('click', function() {
       const btnRow = this.parentElement.parentElement;
-      console.log('tr', btnRow);
       btnRow.remove();
     });
   });
@@ -79,6 +77,13 @@ threeContacts.forEach(contact => {
   // ITERATION 3 - Like Buttons
 
   // Your code goes here ...
+  const btnLike = document.querySelectorAll(".btn-like");
+
+  btnLike.forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.classList.toggle("selected")
+    });
+  });
 
   
   
