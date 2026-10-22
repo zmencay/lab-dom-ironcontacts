@@ -64,7 +64,16 @@ threeContacts.forEach(contact => {
   // ITERATION 2 - Delete Buttons
   
   // Your code goes here ...
-  
+  const btnDelete = document.querySelectorAll(".btn-delete");
+  console.log('Delete btns', btnDelete);
+
+  btnDelete.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const btnRow = this.parentElement.parentElement;
+      console.log('tr', btnRow);
+      btnRow.remove();
+    });
+  });
   
 
   // ITERATION 3 - Like Buttons
